@@ -1,0 +1,8 @@
+.idea/
+__pycache__/
+*.pyc
+*.log
+*.png
+*.json
+node/
+info.txt

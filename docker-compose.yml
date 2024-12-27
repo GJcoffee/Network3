@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  network3:
+    image: ubuntu:22.04
+    container_name: network3
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - /dev/net/tun:/dev/net/tun
+    ports:
+      - "18080:8080"
+    volumes:
+      - ./run_network3.sh:/root/run_network3.sh
+    entrypoint: ["bash", "/root/run_network3.sh"]
